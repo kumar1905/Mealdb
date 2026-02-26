@@ -1,0 +1,86 @@
+{
+  "info": {
+    "_postman_id": "mealdb-api-collection",
+    "name": "MealDB API - Spring Boot",
+    "description": "API collection for testing MealDB Spring Boot backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/meals/health",
+          "host": ["{{base_url}}"],
+          "path": ["meals", "health"]
+        },
+        "description": "Check if backend server is running"
+      }
+    },
+    {
+      "name": "Search Meals by Name",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/meals/search?name=Arrabiata",
+          "host": ["{{base_url}}"],
+          "path": ["meals", "search"],
+          "query": [
+            {
+              "key": "name",
+              "value": "Arrabiata"
+            }
+          ]
+        },
+        "description": "Search for meals by name and get sorted by ingredient count"
+      }
+    },
+    {
+      "name": "Get Meal with Least Ingredients",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/meals/least-ingredients?name=Pasta",
+          "host": ["{{base_url}}"],
+          "path": ["meals", "least-ingredients"],
+          "query": [
+            {
+              "key": "name",
+              "value": "Pasta"
+            }
+          ]
+        },
+        "description": "Get the meal with the fewest ingredients"
+      }
+    },
+    {
+      "name": "Get Random Meal",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/meals/random",
+          "host": ["{{base_url}}"],
+          "path": ["meals", "random"]
+        },
+        "description": "Get a random meal from TheMealDB"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080/api",
+      "type": "string"
+    },
+    {
+      "key": "meal_name",
+      "value": "Arrabiata",
+      "type": "string"
+    }
+  ]
+}

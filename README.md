@@ -14,15 +14,15 @@ mealdb-app/
 
 ## Quick Start
 
-### Backend Setup
+### Backend Setup (Java/Spring Boot)
 ```bash
 cd backend
-npm install
-npm run dev
-# Server runs on http://localhost:5000
+mvn clean install
+mvn spring-boot:run
+# Server runs on http://localhost:8080/api
 ```
 
-### Frontend Setup
+### Frontend Setup (React)
 ```bash
 cd frontend
 npm install
@@ -40,14 +40,17 @@ npm start
 
 ## Tech Stack
 
-**Backend:**
-- Node.js
-- Express.js
-- Axios (API calls)
-- CORS enabled
+**Backend (Java):**
+- Java 17
+- Spring Boot 3.2.0
+- Spring WebFlux
+- Maven
+- Lombok (boilerplate reduction)
+- Jackson (JSON processing)
 
 **Frontend:**
 - React.js
+- Axios (API calls)
 - CSS3 (responsive design)
 
 **External API:**
