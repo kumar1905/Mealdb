@@ -6,7 +6,7 @@ function App() {
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
+//hiii
   const handleSearch = async (e) => {
     e.preventDefault();
     if (!mealName.trim()) return;
